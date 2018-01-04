@@ -1,0 +1,90 @@
+<div class="side-menu d-flex flex-column py-2 font-size-14">
+  <div class="side-menu__logo text-center">
+    <i class="fa fa-dropbox" aria-hidden="true"></i>
+  </div>
+  <ul class="side-menu__list m-0 p-0">
+    <li>
+      <div class="side-menu__icon-wrapper text-white d-inline-block font-size-18">
+        <i class="fa fa-file-text-o" aria-hidden="true"></i>
+      </div>
+      <a class="side-menu__link" routerLink="/files"
+        routerLinkActive="side-menu_active">
+        Files
+      </a>
+    </li>
+    <li>
+      <div class="side-menu__icon-wrapper text-white d-inline-block font-size-18">
+        <i class="fa fa-picture-o" aria-hidden="true"></i>
+      </div>
+      <a class="side-menu__link" routerLink="/photos"
+        routerLinkActive="side-menu_active">
+        Photos
+      </a>
+    </li>
+    <li>
+      <div class="side-menu__icon-wrapper text-white d-inline-block font-size-18">
+        <i class="fa fa-refresh" aria-hidden="true"></i>
+      </div>
+      <a class="side-menu__link" routerLink="/sharing"
+        routerLinkActive="side-menu_active">
+        Sharing
+      </a>
+    </li>
+    <li>
+      <div class="side-menu__icon-wrapper text-white d-inline-block font-size-18">
+        <i class="fa fa-link" aria-hidden="true"></i>
+      </div>
+      <a class="side-menu__link" routerLink="/links"
+        routerLinkActive="side-menu_active">
+        Links
+      </a>
+    </li>
+    <li>
+      <div class="side-menu__icon-wrapper text-white d-inline-block font-size-18">
+        <i class="fa fa-clock-o" aria-hidden="true"></i>
+      </div>
+      <a class="side-menu__link" routerLink="/events"
+        routerLinkActive="side-menu_active">
+        Events
+      </a>
+    </li>
+    <li class="d-flex justify-content-between align-items-center">
+      <span class="side-menu__link-wrapper">
+        <div class="side-menu__icon-wrapper text-white d-inline-block font-size-18">
+          <i class="fa fa-caret-square-o-up" aria-hidden="true"></i>
+        </div>
+        <a class="side-menu__link" routerLink="/get-started"
+          routerLinkActive="side-menu_active">
+          Get Started
+        </a>
+      </span>
+      <span class="side-menu__get-started-count px-2 font-size-12 rounded">
+        3
+      </span>
+    </li>
+  </ul>
+  <div class="side-menu__footer mt-5">
+    <div class="mb-3">
+      <div class="font-size-12 d-flex justify-content-between
+        text-white mb-3">
+        <span>
+          {{ photoSizeGb.toFixed(2) }} GB / {{ totalSize }} GB
+        </span>
+        <span class="d-flex align-items-center justify-content-center
+          rounded-circle side-menu__storage-size-add-btn">
+          +
+        </span>
+      </div>
+      <div class="side-menu__storage-size-bar-wrapper rounded">
+        <div class="side-menu__storage-size-bar"
+          [ngStyle]="{'width': photoSizePerc + '%'}">
+        </div>
+      </div>
+    </div>
+    <div class="side-menu__upgrade-acc-wrapper text-center text-white rounded">
+      <i class="fa fa-arrow-up side-menu__upgrade-acc-icon" aria-hidden="true">
+      </i>
+      Upgrade Account
+    </div>
+  </div>
+</div>

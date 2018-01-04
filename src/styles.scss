@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+// Font Awesome 4.7.0
+$fa-font-path: "../node_modules/font-awesome/fonts";
+@import "~font-awesome/scss/font-awesome";
+
+body {
+  overflow: hidden;
+}
+
+.font-size-12 {
+  font-size: 12px;
+}
+
+.font-size-14 {
+  font-size: 14px;
+}
+
+.font-size-18 {
+  font-size: 18px;
+}
+
+.font-size-20 {
+  font-size: 20px;
+}
+
+.font-size-22 {
+  font-size: 22px;
+}

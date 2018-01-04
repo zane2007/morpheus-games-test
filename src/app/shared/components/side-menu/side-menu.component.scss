@@ -1,0 +1,74 @@
+@import "~styles/variables";
+
+.side-menu {
+  flex: 1 1 auto;
+
+  .side-menu__logo {
+    color: $blue-color;
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .side-menu__list {
+    list-style-type: none;
+    flex: 1;
+  }
+
+  .side-menu__link {
+    color: #5D6482;
+    text-decoration: none;
+    line-height: 35px;
+  }
+
+  .side-menu__link:hover,
+  .side-menu_active {
+    color: #fff;
+  }
+
+  .side-menu__icon-wrapper {
+    width: 24px;
+  }
+
+  .side-menu__get-started-count {
+    border: 1px solid #fff;
+    color: $blue-color;
+  }
+
+  @media screen and (max-width: 992px) {
+    .side-menu__get-started-count {
+      display: none;
+    }
+  }
+
+  .side-menu__footer {
+
+    .side-menu__storage-size-add-btn {
+      border: 1px solid #fff;
+      width: 20px;
+      height: 20px;
+      color: $blue-color;
+      cursor: pointer;
+      flex: 0 0 auto;
+    }
+
+    .side-menu__storage-size-bar-wrapper {
+      background-color: #000;
+      overflow: hidden;
+    }
+
+    .side-menu__storage-size-bar {
+      height: 5px;
+      background-color: $blue-color;
+    }
+
+    .side-menu__upgrade-acc-wrapper {
+      border: 1px solid #fff;
+      line-height: 30px;
+      cursor: pointer;
+
+      .side-menu__upgrade-acc-icon {
+        color: $blue-color;
+      }
+    }
+  }
+}

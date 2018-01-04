@@ -1,0 +1,69 @@
+<div class="container-fluid photos py-3">
+  <div class="row">
+    <div class="col-12">
+      <div class="d-flex justify-content-between mb-5">
+        <input type="text" placeholder="&#xF002; Search..."
+          class="photos__search" style="font-family:Arial, FontAwesome" />
+        <span class="photos__user-wrapper">
+          <i class="fa fa-bell-o" aria-hidden="true"></i>
+          <span class="photos__user-name px-2">Eddie Lobanovsky</span>
+          <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-12">
+      <span class="font-size-22">Photos</span>
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-12">
+      <div class="d-flex justify-content-between">
+        <span class="photos__actions font-size-20 d-flex justify-content-between">
+          <i class="fa fa-upload" aria-hidden="true"></i>
+          <i class="fa fa-calendar-plus-o" aria-hidden="true"></i>
+          <i class="fa fa-window-maximize" aria-hidden="true"></i>
+          <i class="fa fa-trash-o" aria-hidden="true"></i>
+        </span>
+        <span class="photos__filters">
+          <span class="photos__filter d-inline-block px-3 rounded"
+            (click)="sortBy('name')" [ngClass]="{
+              'photos__filters_sorted': sortType === 'name'
+            }">
+            Name
+          </span>
+          <span class="photos__filter d-inline-block px-3 rounded"
+            (click)="sortBy('size')" [ngClass]="{
+              'photos__filters_sorted': sortType === 'size'
+            }">
+            Size
+          </span>
+          <span class="photos__filter d-inline-block px-3 rounded"
+            (click)="sortBy('modified')" [ngClass]="{
+              'photos__filters_sorted': sortType === 'modified'
+            }">
+            Modified
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 d-flex flex-wrap justify-content-center photos__content-wrapper">
+      <div class="photos__photo-card-wrapper p-1" *ngFor="let photo of photos">
+        <div class="photos__photo-card">
+          <div class="photos__photo-card-image"
+            appBackgroundImage="{{photo.url}}">
+          </div>
+          <div class="photos__photo-card-text font-size-14 px-1">
+            {{ photo.fileName }}
+          </div>
+          <div class="photos__photo-card-text font-size-12 px-1">
+            {{ photo.size }} MB
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

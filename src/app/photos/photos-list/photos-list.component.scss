@@ -1,0 +1,73 @@
+@import "~styles/mixins";
+@import "~styles/variables";
+
+.photos {
+  color: #9BA0A4;
+
+  .photos__search {
+    border-width: 0;
+
+    &:focus {
+      outline: 0;
+    }
+
+    @include placeholder {
+      color: #bbb;
+    };
+  }
+
+  .photos__user-name {
+    position: relative;
+  }
+
+  .photos__actions {
+    width: 120px;
+  }
+
+  .photos__filter {
+    cursor: pointer;
+
+    &.photos__filters_sorted {
+      background-color: #41485C;
+      color: #fff;
+    }
+  }
+
+  .photos__photo-card-wrapper {
+    @media screen and (min-width: 576px) {
+      width: 100%;
+    }
+
+    @media screen and (min-width: 992px) {
+      width: 50%;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 20%;
+    }
+
+    .photos__photo-card {
+      border: 1px solid;
+
+      .photos__photo-card-image {
+        height: 150px;
+
+        @media screen and (min-width: 2000px) {
+          height: 250px;
+        }
+
+        background: {
+          size: cover;
+          position: center;
+        }
+      }
+
+      .photos__photo-card-text {
+        line-height: 30px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+  }
+}
