@@ -34,9 +34,7 @@
   }
 
   .photos__photo-card-wrapper {
-    @media screen and (min-width: 576px) {
-      width: 100%;
-    }
+    width: 100%;
 
     @media screen and (min-width: 992px) {
       width: 50%;
@@ -52,7 +50,7 @@
       .photos__photo-card-image {
         height: 150px;
 
-        @media screen and (min-width: 2000px) {
+        @media screen and (max-width: 992px), screen and (min-width: 2000px) {
           height: 250px;
         }
 
