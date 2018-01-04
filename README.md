@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # Install dependencies
 
-Open a command prompt in the morpheus-games-test folder and execute the following commands:
+Open a command prompt in the morpheus-games-test folder and execute the following command:
 
 > npm install
 
