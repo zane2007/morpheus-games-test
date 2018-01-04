@@ -9,16 +9,17 @@ import { Photo } from '../shared/photo';
 })
 export class PhotosListComponent implements OnInit {
 
-  photos: Array<Photo> = new Array<Photo>();
-  sortDir: number = 1;
-  sortType: string = '';
+  photos: Array<Photo>;
+  sortDir: number;
+  sortType: string;
 
   constructor(private photoService: PhotoService) { }
 
   ngOnInit() {
-    this.photoService
-      .list()
-      .subscribe((photos: Array<Photo>) => this.photos = photos);
+    this.sortDir = 1;
+    this.sortType = '';
+
+    this.getPhotos();
   }
 
   sortBy(sortType: string): void {
@@ -48,5 +49,16 @@ export class PhotosListComponent implements OnInit {
         })
         break;
     }
+  }
+
+  private getPhotos(): void {
+    this.photos = [];
+
+    this.photoService
+      .list()
+      .subscribe((photos: Array<Photo>) => {
+        this.photos = photos
+        this.sortBy('modified');
+      });
   }
 }
